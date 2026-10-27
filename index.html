@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <title>Il registro dei voti</title>
+  <link rel="stylesheet" href="dist/style.css">
+</head>
+<body>
+  <h1>Il registro dei voti</h1>
+
+  <p>
+    Nome dell'alunno:
+    <input type="text" id="nome">
+  </p>
+  <p>
+    Voto (da 1 a 10):
+    <input type="number" id="voto" min="1" max="10">
+  </p>
+ 
+<select id="materia">
+  <option value="">Scegli la materia</option>
+  <option value="Matematica">Matematica</option>
+  <option value="Italiano">Italiano</option>
+  <option value="Geografia">Geografia</option>
+</select>
+ <p>
+  <!-- RADIO BUTTON -->
+<fieldset>
+  <legend>Tipo di verifica</legend>
+  <input type="radio" name="tipo" id="tipo-scritto" value="Scritto"> Scritto
+<input type="radio" name="tipo" id="tipo-orale" value="Orale"> Orale
+<input type="radio" name="tipo" id="tipo-pratico" value="Pratico"> Pratico
+</fieldset>
+
+<!-- Check BOX -->
+<fieldset>
+  <legend>Opzioni</legend>
+  <label><input type="checkbox" id="ritardo"> Consegna in ritardo</label>
+  <label><input type="checkbox" id="facoltativo"> Esercizio facoltativo svolto</label>
+  <label><input type="checkbox" id="recupero"> Verifica di recupero</label>
+</fieldset>
+ <p>
+  <button onclick="registra()">Registra</button>
+  </p>
+  <p id="messaggio"></p>
+
+  <img id="immagine" src="img/sufficiente.svg" alt="Semaforo giallo">
+
+  <h2>Voti registrati</h2>
+  <ul id="elenco"></ul>
+
+  <h2>Riepilogo</h2>
+  <table id="riepilogo">
+    <tr>
+      <th>Giudizio</th>
+      <th>Quanti</th>
+    </tr>
+    <tr>
+      <td>Insufficiente</td>
+      <td id="conta-insufficiente">0</td>
+    </tr>
+    <tr>
+      <td>Sufficiente</td>
+      <td id="conta-sufficiente">0</td>
+    </tr>
+    <tr>
+      <td>Buono</td>
+      <td id="conta-buono">0</td>
+    </tr>
+    <tr>
+      <td>Ottimo</td>
+      <td id="conta-ottimo">0</td>
+    </tr>
+  </table>
+
+  <p id="media"></p>
+
+  <script src="dist/script.js"></script>
+</body>
+</html>

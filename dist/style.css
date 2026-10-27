@@ -1,0 +1,33 @@
+/* Stile minimo per "Il registro dei voti" */
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+#immagine {
+  width: 100px;
+}
+
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+  padding: 5px;
+}
+
+/* Colori dei giudizi: il programma aggiunge queste classi ai <li> */
+.insufficiente {
+  color: red;
+}
+
+.sufficiente {
+  color: orange;
+}
+
+.buono {
+  color: green;
+}
+
+.ottimo {
+  color: blue;
+  font-weight: bold;
+}
